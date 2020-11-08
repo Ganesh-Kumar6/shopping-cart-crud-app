@@ -8,12 +8,15 @@ const fetchOptions = {
   headers: {
     "Content-Type": "application/json",
   },
-  Origin: "http://localhost:5500",
+  Origin: "https://shopping-cart-crud-app.herokuapp.com/",
 };
 
 async function getData() {
   try {
-    const response = await fetch("http://localhost:5000/backend", fetchOptions);
+    const response = await fetch(
+      "https://shopping-cart-crud-app.herokuapp.com/backend",
+      fetchOptions
+    );
 
     // console.log("the response object is ", response);
     return response.json();
