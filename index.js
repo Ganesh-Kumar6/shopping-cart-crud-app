@@ -15,7 +15,7 @@ app.listen(port, () => {
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Origin",
-    "https://shopping-cart-crud-app.herokuapp.com/"
+    "https://ganesh-kumar-shopping-cart-crud-app.netlify.app/"
   );
   res.header("Access-Control-Allow-Headers", "Content-Type");
   res.header("Access-Control-Allow-Methods", "GET,POST");
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 });
 
 // Listen for post request
-app.post("https://shopping-cart-crud-app.herokuapp.com/backend", (req, res) => {
+app.post("https://shopping-cart-crud-app.herokuapp.com/", (req, res) => {
   executeQuery(req.body.query).then((result) => {
     // console.log("the result object is ", result);
     res.send(JSON.stringify({ result }));

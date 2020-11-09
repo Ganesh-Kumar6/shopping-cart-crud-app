@@ -8,13 +8,13 @@ const fetchOptions = {
   headers: {
     "Content-Type": "application/json",
   },
-  Origin: "https://shopping-cart-crud-app.herokuapp.com/",
+  Origin: "https://ganesh-kumar-shopping-cart-crud-app.netlify.app/",
 };
 
 async function getData() {
   try {
     const response = await fetch(
-      "https://shopping-cart-crud-app.herokuapp.com/backend",
+      "https://shopping-cart-crud-app.herokuapp.com/",
       fetchOptions
     );
 
