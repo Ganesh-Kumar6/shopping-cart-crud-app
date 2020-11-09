@@ -8,15 +8,12 @@ const fetchOptions = {
   headers: {
     "Content-Type": "application/json",
   },
-  Origin: "https://ganesh-kumar-shopping-cart-crud-app.netlify.app/",
+  Origin: "http://localhost:5500",
 };
 
 async function getData() {
   try {
-    const response = await fetch(
-      "https://shopping-cart-crud-app.herokuapp.com/",
-      fetchOptions
-    );
+    const response = await fetch("http://localhost:5000", fetchOptions);
 
     // console.log("the response object is ", response);
     return response.json();
