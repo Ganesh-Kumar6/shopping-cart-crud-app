@@ -22,6 +22,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static("Frontend"));
+
 app.get("/", (req, res) => {
   res.send(`<h1> Server running </h1>`);
 });
