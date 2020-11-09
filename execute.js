@@ -1,8 +1,7 @@
 require("dotenv").config();
+const mysql = require("mysql2/promise");
 
-import mysql from "mysql2/promise";
-
-export async function executeQuery(query) {
+async function executeQuery(query) {
   try {
     const connection = await mysql.createConnection({
       host: process.env.MYSQL_HOST,
@@ -19,3 +18,5 @@ export async function executeQuery(query) {
     return error.message;
   }
 }
+
+module.exports = executeQuery;
