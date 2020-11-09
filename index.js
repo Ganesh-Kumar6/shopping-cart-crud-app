@@ -22,12 +22,12 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("https://shopping-cart-crud-app.herokuapp.com/", (req, res) => {
-  res.sendFile("./Frontend/index.html");
+app.get("/", (req, res) => {
+  res.send(`<h1> Server running </h1>`);
 });
 
 // Listen for post request
-app.post("https://shopping-cart-crud-app.herokuapp.com/", (req, res) => {
+app.post("/", (req, res) => {
   executeQuery(req.body.query).then((result) => {
     // console.log("the result object is ", result);
     res.send(JSON.stringify({ result }));
