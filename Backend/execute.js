@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv/types").config();
 const mysql = require("mysql2/promise");
 
 async function executeQuery(query) {
